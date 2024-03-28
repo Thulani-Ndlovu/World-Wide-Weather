@@ -1,0 +1,21 @@
+{
+  "name": "world-wide-weather",
+  "version": "1.0.0",
+  "description": "World Wide Weather Portfolio Project By Thulani Ndlovu\r ======================================================\r 1. Project Title: World Wide Weather\r 2. Collaboration: Solo Project\r 3. Project Description: This is a weather application that gives the real time weather of a place including the current time.\r 4. Technologies: HTML, CSS, EJS, ExpressJS, Bootstrap, Axios, APIs",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.19.1",
+    "nodemon": "^3.1.0"
+  }
+}
