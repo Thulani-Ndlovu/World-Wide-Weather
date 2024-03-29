@@ -10,9 +10,24 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("/weather", async (req, res) => {
+    const city = req.query.city;
+    const API_key = "a0c368d98622f67da110c15e8754fbe3";
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${API_key}`
 
-    res.render("index.ejs");
+    let err = null;
+    let weather;
+
+    try {
+        const weather_data = await axios.get(URL);
+        weather = weather_data.data;
+        
+    } catch (err) {
+        err = "Invalid City!!!";
+        weather = null;
+    }
+
+    res.render("index.ejs", {weather, err });
 });
 
 
