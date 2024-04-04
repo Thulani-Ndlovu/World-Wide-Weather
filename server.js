@@ -21,7 +21,6 @@ app.get("/weather", async (req, res) => {
     try {
         const weather_data = await axios.get(URL);
         weather = weather_data.data;
-        console.log(weather);
 
         
     } catch (err) {
