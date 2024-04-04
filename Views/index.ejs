@@ -58,14 +58,7 @@
                 </div>
               </div>
               <div>
-                <% if (weather.weather[0].description === "scattered clouds") { %>
-                  <img src="https://www.bing.com/images/search?view=detailV2&ccid=%2foU5V7Og&id=15006E72336E03B05B436285BC238DD03F0789CD&thid=OIP._oU5V7Ogovh72qq7HWt7JQHaEK&mediaurl=https%3a%2f%2fthumbs.dreamstime.com%2fb%2fbroken-clouds-lots-cascading-together-70079802.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.fe853957b3a0a2f87bdaaabb1d6b7b25%3frik%3dzYkHP9CNI7yFYg%26pid%3dImgRaw%26r%3d0&exph=450&expw=800&q=broken+clouds+picture&simid=608014198413997242&FORM=IRPRST&ck=119BC15220218CF8C1C09479D1734285&selectedIndex=25&itb=0&ajaxhist=0&ajaxserp=0"
-                    width="100px">
-                <% } %>
-                <% if (weather.weather[0].description === "over cast") { %>
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
-                    width="100px">
-                <% } %>   
+                <img src="https://openweathermap.org/img/wn/<%= weather.weather[0].icon %>@2x.png">
               </div>
             </div>
 
