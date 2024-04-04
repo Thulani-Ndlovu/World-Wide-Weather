@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/weather", async (req, res) => {
     const city = req.query.city;
     const API_key = "a0c368d98622f67da110c15e8754fbe3";
-    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_key}`
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_key}`;
 
     let err = null;
     let weather;
@@ -22,6 +22,7 @@ app.get("/weather", async (req, res) => {
         const weather_data = await axios.get(URL);
         weather = weather_data.data;
         console.log(weather);
+
         
     } catch (err) {
         err = "Invalid City!!!";
