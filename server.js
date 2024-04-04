@@ -2,18 +2,18 @@ import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
 import ejs from "ejs";
+import 'dotenv/config'
 
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/weather", async (req, res) => {
     const city = req.query.city;
-    const API_key = "a0c368d98622f67da110c15e8754fbe3";
-    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_key}`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.API_key}`;
 
     let err = null;
     let weather;
